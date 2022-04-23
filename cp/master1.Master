@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="master1.master.cs" Inherits="cp.master1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>car parking </title>
+    <link href="css/style1.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" >
+var slideIndex = 0;
+window.onload = showSlides;
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+} 
+
+</script>
+    <style type="text/css">
+        .auto-style1{
+            height: 20px;
+            width: 1355px;
+        }
+
+        
+        .auto-style4 {
+            height: 500px;
+            width: 1355px;
+        }
+        .auto-style5 {
+            font-size: 20px;
+        }
+        .auto-style6 {
+            height: 50px;
+            width: 1355px;
+        }
+        
+        .auto-style12 {
+            font-size: medium;
+            height: 36px;
+            width: 1304px;
+            font-weight: bold;
+        }
+        
+        .auto-style13 {
+            font-weight: bold;
+            font-size: medium;
+        }
+        
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="font-family: Arial">
+            <tr>
+                <td style="background-color: #E6E6FA; text-align: left" class="auto-style1">
+                    <h1 class="auto-style12"><strong><span class="auto-style5">&nbsp;ONLINE CAR PARkING RESERVATION SYSTEM</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Button1" runat="server" ForeColor="#000099" OnClick="Button1_Click1" PostBackUrl="~/WebForm3.aspx" Text="REGISTER" BackColor="Lavender" BorderColor="Lavender" BorderStyle="Solid" CssClass="auto-style13" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>
+                        <asp:Button ID="Button2" runat="server" ForeColor="#000099" OnClick="Button2_Click1" PostBackUrl="~/Sign in.aspx" Text="LOG IN" BackColor="Lavender" BorderColor="Lavender" BorderStyle="Solid" CssClass="auto-style13" />
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td colspan="2" style="background-color: #b6ff00; text-align: center" class="auto-style6">
+                    <b>Copyright &#169 CarParkingSystem 2021</b></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

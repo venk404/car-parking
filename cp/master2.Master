@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="master2.master.cs" Inherits="cp.master2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>OCPRS</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="JavaScripts.js"></script>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            background-image:url('20.jpg');
+            background-size:cover;
+            background-attachment:scroll;
+        }
+        .menu{
+            position:relative;
+            top:0;
+            left:0;
+            padding:10px 50px;
+            box-sizing:border-box;
+            width:100%;
+            height:110px;
+            background:rgba(232,232,232,0.8);
+            border-bottom:1px #deccba;       
+        }
+        .menu ul{
+            float:right;
+            margin:0;
+            padding:0;
+            display:flex;
+            
+        }
+        .menu ul li{
+            display:inline-block;
+            list-style:none;
+            width:150px;
+            height:700px;
+            text-align:center;
+            line-height:0.1px;
+           margin-top:45px
+            
+            
+            
+         
+        }
+        .menu ul li a{
+            
+            color:#fff;
+            padding:10px 15px;
+            text-decoration:none;
+            font-size:18.5px;
+            font-weight:bold;
+            font-family:Calibri;
+            text-transform:uppercase;
+            color:navy;
+           
+            
+        }
+        .menu ul li a:hover{
+            background:rgba(0,0,0,0.6);
+            border-radius:6px;
+        }
+        .menu img{
+            margin-bottom:5px;
+            border-radius: 50%;
+            height:89px;
+            width:80px;
+            float:left;
+            
+        }
+        .label{
+          
+            
+           top:50%;
+            left:35%;
+                                                                                                                                                    
+            transform:translateX(-50%);
+            display:flex;
+        }
+        #Label1{
+           font-size:45px;
+           text-align:center;
+           color:#cccccc;
+           font-weight:bold;
+           position: absolute;
+        }
+    .about {
+    position: absolute;
+    left:700px;
+    top:900px;
+    bottom:100px;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height:500px;
+    padding: 20px;
+    background: rgba(232,232,232,0.8);
+    box-sizing: padding-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    border-radius: 10px;
+} 
+        
+
+ 
+  
+  
+   
+
+            .about h1 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #000000;
+        text-align: center;
+    }
+
+.aboutus pre {
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: Georgia;
+    text-align:justify;
+}
+
+
+        
+    </style>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+
+       
+     
+        <div class="menu">
+            
+            <img src="images/logo.jpg" />
+            <asp:Label ID="Label3" runat="server" Text="ONLINE CAR PARKING RESERVATION SYSTEM" Font-Bold="True" Font-Names="Cambria" Font-Size="X-Large" ForeColor="#000066"></asp:Label>
+            <ul>
+                <li><a>Welcome&nbsp;<%Response.Write(Session["User"]); %></a></li>&nbsp; &nbsp; &nbsp;&nbsp;
+                <li><a href="WebForm4.aspx">Home</a></li>
+                
+                <li><a href="WebForm8.aspx">PARKING AREA</a></li>
+                <li><a href="my booking.aspx">MY BOOKING</a></li>
+                <li><a href="Sign in.aspx" target="_self">Logout&#x21E2</a></li>
+            </ul>
+            </div> <div>
+                            <asp:Label ID="Label1" class="label" runat="server" Text="Get a Lot For Good Parking Spot..." Font-Bold="True"></asp:Label>
+
+                   </div>
+        
+           <asp:ContentPlaceHolder ID="MainContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+        
+
+
+    </form></body>
+    
+</html>

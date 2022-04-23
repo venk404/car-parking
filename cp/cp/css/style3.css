@@ -1,0 +1,60 @@
+﻿ *{
+     margin:0;
+     padding:0;
+ }
+ section{
+     background-image:url('../images/7.jpg');
+     background-repeat:no-repeat;
+     background-size:cover;
+     width:100vw;
+     height:100vh;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+ }
+.container{
+    width: 50vw;
+    height: 80vh;
+    background-image: url('../images/itl.cat_cars-wallpaper-hd-1080p_1553852.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    postion: relative;
+}
+.inner1{
+    width:50%;
+    height:100%;
+    postion:absolute;
+    right:0;
+    background:rgba(255,252,252,0.92);
+    text-align:center;
+}
+h3{
+    font-size:2.5vw;
+    font-family:'pacifico';
+    margin-bottom:5px;
+
+}
+input[type=text], input[type=password]{
+    width: 80%;
+    height: 10%;
+    margin-bottom: 3%;
+    border: 0;
+    background-color: transparent;
+    border-botton: 1px solid #4b4040;
+}
+input[placeholder]{
+    font-size:1.5vw;
+    padding-left:3%;
+    font-family:'crete Round';
+}
+
+.btn{
+    width:40%;
+    height:8%;
+    margin-bottom:30vh;
+    font-family:'crete Round';
+    font-size:1.3vw;
+    background-color:#12a312;
+    color:white;
+    border:1px solid;
+}
